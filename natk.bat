@@ -1,33 +1,29 @@
 @echo off 
-color F0
-title NetworkAnalysisToolkit
+color 0A
+title NetworkAnalysisToolkit v1.0
 :start
 echo WELCOME TO NATK!
 
-pause
+					pause
 
 echo Press 1 for ipconfig
 echo Press 2 for whois
 echo Press 3 for netstats
 echo Press 4 for hostname
+echo Press 5 for traceroute
+echo Press 6 for dos
 set /p car=
-if %car% == 1 goto ipconfig
+if %car% == 1 goto ip
 if %car% == 2 goto whois
 if %car% == 3 goto netstats
 if %car% == 4 goto host
+if %car% == 5 goto route
+if %car% == 6 goto dos
 
-
-		:ipconfig
-		echo Loading.
-        ping localhost -n 2 >nul
-		cls
-		echo Loading..
-		ping localhost -n 2 >nul
-		cls
-		echo Loading...
-		ping localhost -n 2 >nul
-		cls
+		
+		
 		:ip
+		cls
 		echo WELOCME TO THE IPCONFIG MODULE!
 		pause
 		
@@ -102,16 +98,8 @@ if %car% == 4 goto host
 			
 			
 			:whois
-			echo Loading.
-        ping localhost -n 2 >nul
-		cls
-		echo Loading..
-		ping localhost -n 2 >nul
-		cls
-		echo Loading...
-		ping localhost -n 2 >nul
-		cls
-		:is
+			cls
+		
 	    echo WELCOME TO THE WHOIS MODULE!
 		
 		echo Press 9 to start whois
@@ -134,17 +122,8 @@ if %car% == 4 goto host
 		
 		
 		:netstats
+		cls
 		
-		echo Loading.
-        ping localhost -n 2 >nul
-		cls
-		echo Loading..
-		ping localhost -n 2 >nul
-		cls
-		echo Loading...
-		ping localhost -n 2 >nul
-		cls
-		echo WELCOME TO THE NETSTATS MODULE!
 		
 		
 		echo Press a to Display All connections and listening ports
@@ -255,14 +234,55 @@ if %car% == 4 goto host
 		
 		
 		:host
+		cls
 		hostname
 		
-		cho done!
+		echo done!
 	    echo Press s to go to the menu
 		echo Press e to close the window
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
+		
+		
+		:route
+		cls
+		echo WELCOME TO THE TRACEROUTE MODULE!
+        
+		
+		
+		set /p ip=Enter the target ip adress:
+		
+		
+		
+		
+		
+		tracert %ip%
+		
+		
+		echo done!
+	    echo Press s to go to the menu
+		echo Press e to close the window
+		set /p var=
+		if %var% == s goto start
+		if %var% == e goto EOF
+	
+		:dos
+		
+	      cls
+		echo WELCOME TO THE DOS MODULE!
+		
+		set /p ip=Enter the target ip adress:
+		
+		ping -n 600 -l 100 %ip%
+		
+		echo done!
+	    echo Press s to go to the menu
+		echo Press e to close the window
+		set /p var=
+		if %var% == s goto start
+		if %var% == e goto EOF
+		
 		
 	
 		
