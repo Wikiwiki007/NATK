@@ -14,6 +14,7 @@ set /p car=
 if %car% == 1 goto ipconfig
 if %car% == 2 goto whois
 if %car% == 3 goto netstats
+if %car% == 4 goto host
 
 
 		:ipconfig
@@ -253,7 +254,15 @@ if %car% == 3 goto netstats
 
 		
 		
+		:host
+		hostname
 		
+		cho done!
+	    echo Press s to go to the menu
+		echo Press e to close the window
+		set /p var=
+		if %var% == s goto start
+		if %var% == e goto EOF
 		
 	
 		
