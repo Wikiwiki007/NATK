@@ -1,5 +1,8 @@
 @echo off 
 color 0B
+
+
+
 title NetworkAnalysisToolkit v1.0
 mode con: cols=170  lines=50
 echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
@@ -11,7 +14,7 @@ del temp.vbs
 
 :start
 cls
-echo WELCOME TO NATK! by Wkiwiki
+echo WELCOME TO NATK! by Wikiwiki
 ping localhost -n 2 >nul
  
 echo __________________________
@@ -165,7 +168,7 @@ if %car% NEQ 6 goto start
 		if %stat% == es goto protostats
 		
 		
-		:allstats
+		:allstat
 		
 		netstat -a %int%
 		
