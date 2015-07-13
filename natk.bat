@@ -132,7 +132,7 @@ if %car% == 3 goto netstats
 		if %var% == e goto EOF
 		
 		
-		:stats
+		:netstats
 		
 		echo Loading.
         ping localhost -n 2 >nul
@@ -144,8 +144,8 @@ if %car% == 3 goto netstats
 		ping localhost -n 2 >nul
 		cls
 		echo WELCOME TO THE NETSTATS MODULE!
-		echo First please set the stat interval
-		set /p int
+		
+		
 		echo Press a to Display All connections and listening ports
 		echo Press e to Display Ethernet statistics.
 		echo Press n to Display addresses and port numbers in Numerical form.
