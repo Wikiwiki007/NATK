@@ -28,7 +28,7 @@ if %car% == 6 goto dos
 		
 		:ip
 		cls
-		echo WELOCME TO THE IPCONFIG MODULE!
+		echo WELCOME TO THE IPCONFIG MODULE!
 		ping localhost -n 2 >nul
 		echo ___________________________________________________________________
 		echo Type all for full configuration information.
