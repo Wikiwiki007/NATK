@@ -1,17 +1,21 @@
 @echo off 
 color 0A
 title NetworkAnalysisToolkit v1.0
+mode con: cols=170  lines=50
+
 :start
-echo WELCOME TO NATK!
-
-					pause
-
-echo Press 1 for ipconfig
-echo Press 2 for whois
-echo Press 3 for netstats
-echo Press 4 for hostname
-echo Press 5 for traceroute
-echo Press 6 for dos
+cls
+echo WELCOME TO NATK! by Wkiwiki
+ping localhost -n 2 >nul
+ 
+echo __________________________
+echo ^|Press 1 for ipconfig	 ^|
+echo ^|Press 2 for whois	 ^|
+echo ^|Press 3 for netstats	 ^|
+echo ^|Press 4 for hostname	 ^|
+echo ^|Press 5 for traceroute  ^|
+echo ^|Press 6 for dos         ^|
+echo __________________________
 set /p car=
 if %car% == 1 goto ip
 if %car% == 2 goto whois
@@ -25,12 +29,13 @@ if %car% == 6 goto dos
 		:ip
 		cls
 		echo WELOCME TO THE IPCONFIG MODULE!
-		pause
-		
+		ping localhost -n 2 >nul
+		echo ___________________________________________________________________
 		echo Type all for full configuration information.
 		echo Type Flush to Purge the DNS Resolver cache.
 		echo Type register to  Refresh all DHCP leases and re-register DNS names.
 		echo Type Display to Display the contents of the DNS Resolver Cache.
+		echo ___________________________________________________________________
 		set /p type=
 		if %type% == all goto all
 		if %type% == flush goto Flush
@@ -101,9 +106,10 @@ if %car% == 6 goto dos
 			cls
 		
 	    echo WELCOME TO THE WHOIS MODULE!
-		
+		echo _____________________________
 		echo Press 9 to start whois
 		echo Press 8 to go to the main menu
+		echo ______________________________
 		set /p whois=
 		if %whois% == 9 start www.whois.net & goto who
 		if %whois% == 8 cls & goto start 
@@ -124,8 +130,10 @@ if %car% == 6 goto dos
 		:netstats
 		cls
 		
+		echo WELCOME TO THE NETSTATS MODULE!
 		
-		
+		ping localhost -n 2 >nul
+		echo __________________________________________________________________________________
 		echo Press a to Display All connections and listening ports
 		echo Press e to Display Ethernet statistics.
 		echo Press n to Display addresses and port numbers in Numerical form.
@@ -133,6 +141,7 @@ if %car% == 6 goto dos
 		echo Press o to Display the Owning process ID associated with each connection.
 		echo Press b to Display the exe involved in creating each connection or listening port.
 		echo Press es to Display Ethernet statistics and Display per-protocol statistics
+		echo __________________________________________________________________________________
         set /p stat=
 		if %stat% == a goto allstat
 		if %stat% == e goto ethstat
@@ -248,7 +257,7 @@ if %car% == 6 goto dos
 		:route
 		cls
 		echo WELCOME TO THE TRACEROUTE MODULE!
-        
+        ping localhost -n 2 >nul
 		
 		
 		set /p ip=Enter the target ip adress:
@@ -271,7 +280,7 @@ if %car% == 6 goto dos
 		
 	      cls
 		echo WELCOME TO THE DOS MODULE!
-		
+		ping localhost -n 2 >nul
 		set /p ip=Enter the target ip adress:
 		
 		ping -n 600 -l 100 %ip%
