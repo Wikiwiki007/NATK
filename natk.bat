@@ -1,5 +1,5 @@
 @echo off 
-color 0A
+color 0B
 title NetworkAnalysisToolkit v1.0
 mode con: cols=170  lines=50
 echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
