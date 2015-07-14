@@ -1,11 +1,20 @@
 @echo off 
-color 0A
+color 0B
+
+
+
 title NetworkAnalysisToolkit v1.0
 mode con: cols=170  lines=50
+echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "temp.vbs"
+set text=WELCOME TO MY NETWORK ANALYSIS TOOL.
+echo speech.speak "%text%" >> "temp.vbs"
+start temp.vbs
+ping localhost -n 2 >nul
+del temp.vbs
 
 :start
 cls
-echo WELCOME TO NATK! by Wkiwiki
+echo WELCOME TO NATK! by Wikiwiki
 ping localhost -n 2 >nul
  
 echo __________________________
@@ -23,12 +32,19 @@ if %car% == 3 goto netstats
 if %car% == 4 goto host
 if %car% == 5 goto route
 if %car% == 6 goto dos
-
+ 
+ 
+if %car% NEQ 1 goto start
+if %car% NEQ 2 goto start
+if %car% NEQ 3 goto start
+if %car% NEQ 4 goto start
+if %car% NEQ 5 goto start
+if %car% NEQ 6 goto start
 		
 		
 		:ip
 		cls
-		echo WELOCME TO THE IPCONFIG MODULE!
+		echo WELCOME TO THE IPCONFIG MODULE!
 		ping localhost -n 2 >nul
 		echo ___________________________________________________________________
 		echo Type all for full configuration information.
@@ -152,7 +168,7 @@ if %car% == 6 goto dos
 		if %stat% == es goto protostats
 		
 		
-		:allstats
+		:allstat
 		
 		netstat -a %int%
 		
