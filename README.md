@@ -10,3 +10,4 @@ NATK is a software wich include some network monitoring tools.
 [![GitHub stars](https://img.shields.io/github/stars/Wikiwiki007/NATK.svg)](https://github.com/Wikiwiki007/NATK/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Wikiwiki007/NATK.svg)](https://github.com/Wikiwiki007/NATK/network)
 [![GitHub issues](https://img.shields.io/github/issues/Wikiwiki007/NATK.svg)](https://github.com/Wikiwiki007/NATK/issues)
+[![devstate](https://img.shields.io/badge/Current%20state-Inactive%20-red.svg=)
