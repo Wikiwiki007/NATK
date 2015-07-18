@@ -16,7 +16,8 @@ del temp.vbs
 
 :start
 cls
-echo WELCOME TO NATK! by Wikiwiki donate: paetron.com/Wikiwiki007
+echo WELCOME TO NATK! by Wikiwiki007 [donate: paetron.com/Wikiwiki007]
+
 ping localhost -n 2 >nul
  
 echo __________________________
@@ -131,8 +132,8 @@ if %car% NEQ 6 goto start
 		set /p whois=
 		if %whois% == 9 start www.whois.net & goto who
 		if %whois% == 8 cls & goto start 
-		if %whois% NEQ 9 cls & goto is
-		if %whois% NEQ 8 cls & goto is
+		if %whois% NEQ 9 cls & goto whois
+		if %whois% NEQ 8 cls & goto whois
 		
 		:who
 		
