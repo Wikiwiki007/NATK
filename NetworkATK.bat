@@ -16,7 +16,7 @@ del temp.vbs
 
 :start
 cls
-echo WELCOME TO NATK! by Wikiwiki
+echo WELCOME TO NATK! by Wikiwiki donate: paetron.com/Wikiwiki007
 ping localhost -n 2 >nul
  
 echo __________________________
