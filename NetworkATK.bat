@@ -1,3 +1,5 @@
+
+
 @echo off 
 color 0B
 
@@ -308,8 +310,4 @@ if %car% NEQ 6 goto start
 		if %var% == s goto start
 		if %var% == e goto EOF
 		
-		
-	
-		
-			
 		
