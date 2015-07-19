@@ -16,4 +16,6 @@ NATK is a software wich include some network monitoring tools.
 
 currently i am not really editing the script because i think he is kinda finished but if you have suggestions feel free to start issues
 
- 
+[![help](https://img.shields.io/badge/style-flat--squared-green.svg?I-need=Suggestions)]
+[![donate](https://img.shields.io/badge/style-flat--squared-green.svg?Donate=1$)](https://paetron.com/Wikiwiki007)
+
