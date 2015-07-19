@@ -17,7 +17,22 @@ del temp.vbs
 :start
 cls
 echo WELCOME TO NATK! by Wikiwiki007 [donate: paetron.com/Wikiwiki007]
+echo before starting i need to ask if you want all the commands to be logged to a .txt file
+echo do you want? [Y/N]
+set /p yes=
+if %yes% == N goto png
+if %yes% == Y echo please enter the name of the txt file & set name=>>
+set /p file= 
 
+
+
+
+
+
+
+
+
+:png
 ping localhost -n 2 >nul
  
 echo __________________________
@@ -27,6 +42,7 @@ echo ^|Press 3 for netstats	 ^|
 echo ^|Press 4 for hostname	 ^|
 echo ^|Press 5 for traceroute  ^|
 echo ^|Press 6 for dos         ^|
+echo ^|Press 7 for mac adress  ^|
 echo __________________________
 set /p car=
 if %car% == 1 goto ip
@@ -35,7 +51,7 @@ if %car% == 3 goto netstats
 if %car% == 4 goto host
 if %car% == 5 goto route
 if %car% == 6 goto dos
- 
+if %car% == 7 goto mac 
  
 if %car% NEQ 1 goto start
 if %car% NEQ 2 goto start
@@ -43,7 +59,7 @@ if %car% NEQ 3 goto start
 if %car% NEQ 4 goto start
 if %car% NEQ 5 goto start
 if %car% NEQ 6 goto start
-		
+if %car% NEQ 7 goto start		
 		
 		:ip
 		cls
@@ -68,7 +84,7 @@ if %car% NEQ 6 goto start
 		
 		:all 
 		
-	    ipconfig /all
+	    ipconfig /all%name%%file%.txt
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -80,7 +96,7 @@ if %car% NEQ 6 goto start
 		
 		:Flush 
 		
-	    ipconfig /flushdns
+	    ipconfig /flushdns%name%%file%.txt
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -93,7 +109,7 @@ if %car% NEQ 6 goto start
 		
 		:register
 		
-	    ipconfig /registerdns
+	    ipconfig /registerdns%name%%file%.txt
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -106,7 +122,7 @@ if %car% NEQ 6 goto start
 		
 		:display 
 		
-	    ipconfig /displaydns
+	    ipconfig /displaydns%name%%file%.txt
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -173,7 +189,7 @@ if %car% NEQ 6 goto start
 		
 		:allstat
 		
-		netstat -a %int%
+		netstat -a %int%%name%%file%.txt 
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -186,7 +202,7 @@ if %car% NEQ 6 goto start
 		
 		:ethstat
 		
-		netstat -e %int%
+		netstat -e %int%%name%%file%.txt
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -200,7 +216,7 @@ if %car% NEQ 6 goto start
 		
 		:nstats
 		
-		netstat -n %int%
+		netstat -n %int%%name%%file%.txt
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -211,7 +227,7 @@ if %car% NEQ 6 goto start
 		
 		:routstats
 		
-		netstat -r %int%
+		netstat -r %int%%name%%file%.txt
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -223,7 +239,7 @@ if %car% NEQ 6 goto start
 		
 		:owistats
 		
-		netstat -o %int%
+		netstat -o %int%%name%%file%.txt
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -236,7 +252,7 @@ if %car% NEQ 6 goto start
 		
 		:exestats
 		
-		netstat -b %int%
+		netstat -b %int%%name%%file%.txt
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -249,7 +265,7 @@ if %car% NEQ 6 goto start
 		
 		:protostats
 		
-		netstat -e -s %int%
+		netstat -e -s %int%%name%%file%.txt
 		
 		echo done!
 	    echo Press s to go to the menu
@@ -285,7 +301,7 @@ if %car% NEQ 6 goto start
 		
 		
 		
-		tracert %ip%
+		tracert %ip%%name%%file%.txt
 		
 		
 		echo done!
@@ -312,4 +328,16 @@ if %car% NEQ 6 goto start
 		if %var% == s goto start
 		if %var% == e goto EOF
 		
-		
+		:mac
+                 cls
+		echo WELCOME TO THE MAC MODULE
+		ping localhost -n 2>nul
+		getmac 	
+
+                  echo done!
+            echo Press s to go to the menu
+                echo Press e to close the program
+                set /p var=
+                if %var% == s goto start
+                if %var% == e goto EOF
+
