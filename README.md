@@ -19,3 +19,6 @@ currently i am not really editing the script because i think he is kinda finishe
 ![help](https://img.shields.io/badge/I%20need-Suggestions!-brightgreen.svg)
 [![donate](https://img.shields.io/badge/Donate-1%24-pink.svg)](https://paetron.com/Wikiwiki007)
 
+#Future of NATK
+
+i doont know if i will continue to edit NATK on batch... i plan to learn new languages like python,lua etc. should i ?
