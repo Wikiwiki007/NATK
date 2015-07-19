@@ -72,7 +72,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -84,7 +84,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -97,7 +97,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -110,7 +110,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -140,7 +140,7 @@ if %car% NEQ 6 goto start
 	
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -177,7 +177,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -190,7 +190,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -204,7 +204,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -215,7 +215,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -227,7 +227,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -240,7 +240,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -253,7 +253,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -267,7 +267,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -290,7 +290,7 @@ if %car% NEQ 6 goto start
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
@@ -300,13 +300,14 @@ if %car% NEQ 6 goto start
 	      cls
 		echo WELCOME TO THE DOS MODULE!
 		ping localhost -n 2 >nul
-		set /p ip=Enter the target ip adress:
+		echo Enter the target's ip adress
+		set /p ip=
 		
 		ping -n 600 -l 100 %ip%
 		
 		echo done!
 	    echo Press s to go to the menu
-		echo Press e to close the window
+		echo Press e to close the program
 		set /p var=
 		if %var% == s goto start
 		if %var% == e goto EOF
